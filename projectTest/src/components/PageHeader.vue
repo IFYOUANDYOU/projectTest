@@ -30,9 +30,7 @@
         <el-menu-item index="2-2">小程序2</el-menu-item>
         <el-menu-item index="2-3">小程序3</el-menu-item>
       </el-submenu>
-      <el-menu-item index="3">
-        <a href="https://www.ele.me" target="_blank">其他</a>
-      </el-menu-item>
+      <el-menu-item index="3">其他</el-menu-item>
     </el-menu>
   </div>
 </template>

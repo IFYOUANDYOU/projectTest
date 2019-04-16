@@ -13,25 +13,37 @@
       <el-submenu index="mini">
         <template slot="title">
           <i class="el-icon-location"></i>
-          <span>小程序</span>
+          <span>内容管理</span>
         </template>
         <el-menu-item-group>
-          <template slot="title">生活</template>
-          <el-menu-item index="miniList">生活1</el-menu-item>
-          <el-menu-item index="1-2">生活2</el-menu-item>
+          <el-menu-item index="miniList">视频管理</el-menu-item>
+          <el-menu-item index="1-2">美文管理</el-menu-item>
+          <el-menu-item index="1-2">公众号链接</el-menu-item>
+          <el-menu-item index="1-2">背景管理</el-menu-item>
+          <el-menu-item index="1-2">分类管理</el-menu-item>
         </el-menu-item-group>
-        <el-menu-item-group title="便民">
-          <el-menu-item index="1-3">便民1</el-menu-item>
-        </el-menu-item-group>
-        <el-submenu index="1-4">
-          <template slot="title">其他</template>
-          <el-menu-item index="1-4-1">其他1</el-menu-item>
-        </el-submenu>
       </el-submenu>
-      <el-menu-item index="2">
-        <i class="el-icon-menu"></i>
-        <span slot="title">其他</span>
-      </el-menu-item>
+      <el-submenu index="mini">
+        <template slot="title">
+          <i class="el-icon-location"></i>
+          <span>占卜运势</span>
+        </template>
+        <el-menu-item-group>
+          <el-menu-item index="miniList">星座运势</el-menu-item>
+          <el-menu-item index="1-2">订单管理</el-menu-item>
+        </el-menu-item-group>
+      </el-submenu>
+      <el-submenu index="mini">
+        <template slot="title">
+          <i class="el-icon-location"></i>
+          <span>系统管理</span>
+        </template>
+        <el-menu-item-group>
+          <el-menu-item index="miniList">网站配置</el-menu-item>
+          <el-menu-item index="1-2">人员管理</el-menu-item>
+          <el-menu-item index="1-2">资源管理</el-menu-item>
+        </el-menu-item-group>
+      </el-submenu>
     </el-menu>
 </template>
 
