@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>康复链 - 药商端 - 数据详情</title>
+
+    <!-- Bootstrap css -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/animate.min.css" />
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_921837_46dtc1dypx1.css" />
+    <link rel="stylesheet" href="../css/bootstrap-datetimepicker.min.css">
+    <link rel="stylesheet" href="../css/index.min.css" />
+    <!--[if lt IE 9]>
+      <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body class="page" id="page">
+    <!-- 导航栏 -->
+    <nav class="navbar navbar-fixed-top animated fadeIn">
+        <div class="container">
+            <div id="navbar">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+                        aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="/" target="_self">
+                        <img src="../imgs/logo.png" alt="" />
+                    </a>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul id="menu-topmenu" class="nav navbar-nav">
+                        <li class="menu-item">
+                            <a href="#" target="_self">首页</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#" target="_self">分类浏览</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#" target="_self">充值中心</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#" target="_self">数据中心</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="navbar-right clearfix">
+                    <a class="cn-btn news" href="javascript:;" target="_self">
+                        <i class="iconfont icon-bell"></i>
+                    </a>
+                    <a class="cn-btn cart" href="javascript:;" target="_self">
+                        <i class="iconfont icon-gouwuchekong"></i>
+                    </a>
+                    <a class="cn-btn usercenter" href="javascript:;" target="_self">个人中心</a>
+                    <a class="cn-btn loginout" href="javascript:;" target="_self">退出登录</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <main>
+        <div class="dataDT">
+            <div class="container">
+                <!--数据详情-->
+                <div class="details row">
+                    <div class="col-xs-12 col-md-4">
+                        <div class="leftimg">
+                            <img class="thumbimg" src="../imgs/loginbox.jpg" alt="" />
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-md-8">
+                        <div class="rightdt">
+                            <div class="show">
+                                <div class="title">江苏市人民医院心血管科李医生数据资产</div>
+                                <div class="lines"></div>
+                                <div class="desc">
+                                    医生，掌握医药卫生知识，从事疾病预防和治疗的专业人员的统称。医生，古代称大夫或郎中。现在“大夫”一词在北方人中也常用。在欧美医生普遍被称为“Physician”，只有外科医生被称呼为“Surgeon”。自中世纪后人们普遍认为“内科学
+                                </div>
+                                <div class="price">
+                                    数据价格
+                                    <b class="money">1000积分--9999积分</b>
+                                </div>
+                                <div class="collect">
+                                    <a class="acbtn scbtn" href="javascript:;">收藏数据</a>
+                                    累计收藏30次
+                                </div>
+                            </div>
+                            <div class="sel">
+                                <div class="drugs selform">
+                                    <div class="title">选择时间*</div>
+                                    <label>
+                                        <input type='text' class='form-control ' id='dateBegin' name='date_begin' placeholder="-请选择-" value='' ng-model="dateBegin"> </label>
+                                    <span>至</span>
+                                    <label>
+                                        <input type='text' class='form-control ' id='dateEnd' name='date_begin' placeholder="-请选择-" value='' ng-model="dateEnd"> </label>
+                                </div>
+
+                                <div class="drugs selform">
+                                    <div class="title">药品名称*</div>
+                                    <select class="form-control">
+                                        <option>-请选择-</option>
+                                        <option>阿莫西林1</option>
+                                        <option>阿莫西林2</option>
+                                        <option>阿莫西林3</option>
+                                        <option>阿莫西林4</option>
+                                        <option>阿莫西林5</option>
+                                    </select>
+                                </div>
+                                <div class="price">
+                                    购买价格
+                                    <b class="money">200积分</b>
+                                </div>
+                                <div class="ac">
+                                    <a class="acbtn gmbtn" href="javascript:;">立即购买</a>
+                                    <a class="acbtn cart" href="javascript:;" target="_self">
+                                        <i class="iconfont icon-gouwuchekong"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 热门数据 hot -->
+                <div class="hot">
+                        <div class="index-title">
+                            <span class="name">热门数据</span>
+                            <a class="more" href="">查看全部</a>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-6 col-sm-4 col-md-3">
+                                <a class="goods animated fadeInDown" href="">
+                                    <div class="thumb">
+                                        <img class="thumbimg" src="../imgs/loginbox.jpg" alt="" />
+                                        <div class="buy">
+                                            <span>立即购买</span>
+                                        </div>
+                                    </div>
+                                    <div class="msg clearfix">
+                                        <span class="pull-left name">范仲会数据资产</span>
+                                        <span class="pull-right depart">皮肤外科</span>
+                                    </div>
+                                    <div class="tag clearfix">
+                                        <span class="pull-left unit">单价</span>
+                                        <span class="pull-right price">1000.00元起</span>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-xs-6 col-sm-4 col-md-3">
+                                <a class="goods animated fadeInDown" href="">
+                                    <div class="thumb">
+                                        <img class="thumbimg" src="../imgs/loginbox.jpg" alt="" />
+                                        <div class="buy">
+                                            <span>立即购买</span>
+                                        </div>
+                                    </div>
+                                    <div class="msg clearfix">
+                                        <span class="pull-left name">范仲会数据资产</span>
+                                        <span class="pull-right depart">皮肤外科</span>
+                                    </div>
+                                    <div class="tag clearfix">
+                                        <span class="pull-left unit">单价</span>
+                                        <span class="pull-right price">1000.00元起</span>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-xs-6 col-sm-4 col-md-3">
+                                <a class="goods animated fadeInDown" href="">
+                                    <div class="thumb">
+                                        <img class="thumbimg" src="../imgs/loginbox.jpg" alt="" />
+                                        <div class="buy">
+                                            <span>立即购买</span>
+                                        </div>
+                                    </div>
+                                    <div class="msg clearfix">
+                                        <span class="pull-left name">范仲会数据资产</span>
+                                        <span class="pull-right depart">皮肤外科</span>
+                                    </div>
+                                    <div class="tag clearfix">
+                                        <span class="pull-left unit">单价</span>
+                                        <span class="pull-right price">1000.00元起</span>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-xs-6 col-sm-4 col-md-3">
+                                <a class="goods animated fadeInDown" href="">
+                                    <div class="thumb">
+                                        <img class="thumbimg" src="../imgs/loginbox.jpg" alt="" />
+                                        <div class="buy">
+                                            <span>立即购买</span>
+                                        </div>
+                                    </div>
+                                    <div class="msg clearfix">
+                                        <span class="pull-left name">范仲会数据资产</span>
+                                        <span class="pull-right depart">皮肤外科</span>
+                                    </div>
+                                    <div class="tag clearfix">
+                                        <span class="pull-left unit">单价</span>
+                                        <span class="pull-right price">1000.00元起</span>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </main>
+    <!--底部公司信息-->
+    <footer>
+        <div class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 ft1">
+                        <h3>联系方式
+                            <span> \ Contact Us</span>
+                        </h3>
+                        <div class="foot-main">
+                            <p>Add：重庆市渝北区百灵路6号兴茂盛世银座</p>
+                            <p>Tel：023-54852458</p>
+                            <br />
+                            <p>Email：54852458@qq.com</p>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 ft1">
+                        <h3>关于我们
+                            <span> \ About Us</span>
+                        </h3>
+                        <div class="foot-main">
+                            <p>
+                                重庆医生联盟是由30余位三甲医院专家共同出资组建的医生集团，目前有来自重庆市各大三甲公立医院的1000+优质医生资源。
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 ft2">
+                        <div class="pull-left">
+                            <h3>友情链接
+                                <span> \ Links</span>
+                            </h3>
+                            <div class="foot-main">
+                                <p>重庆市医生联盟</p>
+                            </div>
+                        </div>
+                        <div class="pull-right clearfix">
+                            <img class="qrcode" src="../imgs/qrcode.jpg" alt="" />
+                            <p class="text-center">康复链小程序</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="copyright">
+        Copyright(c)2015 All Rights Reserved. Powered By 医生联盟 渝ICP备15012849号-1 渝公网安备 50010302000145号
+    </div>
+    <div id="returntop">
+        <i class="iconfont icon-fold"></i>
+    </div>
+    <script>
+        window.onload = function () { };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
+    <script src="../js/bootstrap-datetimepicker.min.js"></script>
+    <script>
+        function DatePicker(beginSelector, endSelector) {
+            $(beginSelector).datetimepicker({
+                autoclose: true,
+                startView: 'year',
+                minView: 'year',
+                format: 'yyyy-mm',
+                clearBtn: true,
+                todayBtn: true
+            }).on('changeDate', function (ev) {
+                if (ev.date) {
+                    $(endSelector).datetimepicker('setStartDate', new Date(ev.date.valueOf()))
+                } else {
+                    $(endSelector).datetimepicker('setStartDate', null);
+                }
+            })
+            $(endSelector).datetimepicker({
+                autoclose: true,
+                startView: 'year',
+                minView: 'year',
+                format: "yyyy-mm",
+                clearBtn: true,
+                todayBtn: false
+            }).on('changeDate', function (ev) {
+                console.log(ev.date.valueOf())
+                if ($(beginSelector).val() == "") {
+                    alert("请选择开始日期");
+                    $(endSelector).datetimepicker('hide');
+                    return false;
+                }else if (ev.date){
+                    $(beginSelector).datetimepicker('setEndDate', '2012-01')
+                }
+            })
+        }
+        DatePicker("#dateBegin", "#dateEnd");
+    </script>
+</body>
+
+</html>

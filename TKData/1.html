@@ -1,0 +1,1230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="">
+    <link rel="icon" href="https://assets.azul.com/wp-content/themes/AzulSystems/images/favicon.ico">
+    <title>Azul Systems Better Java Performance Superior Java Support</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat%3A400%2C700%7COpen%20Sans%3A400%2C600%2C700%2C300&subset="
+    />
+    <link rel="stylesheet" href="https://assets.azul.com/wp-content/cache/min/1/10d4ceca4f86d5535e7c52dc300f3787.css" data-minify="1"
+    />
+    <script>(function (w, d, s, l, i) {
+        w[l] = w[l] || []; w[l].push({
+            'gtm.start':
+                new Date().getTime(), event: 'gtm.js'
+        }); var f = d.getElementsByTagName(s)[0],
+            j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-WLPJ9BS');</script>
+    <meta name="description" content="Azul Systems Better Java Performance Superior Java Support JDK 8 support plans JDK 10 Java 10 Java 9 OpenJDK 9 Java JVM performance Zing Runtime Zulu Enterprise Zulu Embedded OpenJDK Solve GC issues"
+    />
+    <link rel="canonical" href="https://www.azul.com/" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Azul Systems Better Java Performance Superior Java Support" />
+    <meta property="og:description" content="Azul Systems Better Java Performance Superior Java Support JDK 8 support plans JDK 10 Java 10 Java 9 OpenJDK 9 Java JVM performance Zing Runtime Zulu Enterprise Zulu Embedded OpenJDK Solve GC issues"
+    />
+    <meta property="og:url" content="https://www.azul.com/" />
+    <meta property="og:site_name" content="Azul Systems, Inc." />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:description" content="Azul Systems Better Java Performance Superior Java Support JDK 8 support plans JDK 10 Java 10 Java 9 OpenJDK 9 Java JVM performance Zing Runtime Zulu Enterprise Zulu Embedded OpenJDK Solve GC issues"
+    />
+    <meta name="twitter:title" content="Azul Systems Better Java Performance Superior Java Support" />
+    <script type='application/ld+json'>{"@context":"https:\/\/schema.org","@type":"WebSite","@id":"#website","url":"https:\/\/www.azul.com\/","name":"Azul Systems, Inc.","potentialAction":{"@type":"SearchAction","target":"https:\/\/www.azul.com\/?s={search_term_string}","query-input":"required name=search_term_string"}}</script>
+    <script type='application/ld+json'>{"@context":"https:\/\/schema.org","@type":"Organization","url":"https:\/\/www.azul.com\/","sameAs":[],"@id":"https:\/\/www.azul.com\/#organization","name":"Azul Systems Inc.","logo":"https:\/\/www.azul.com\/files\/azul.png"}</script>
+    <link rel='dns-prefetch' href='//assets.azul.com' />
+    <link rel='dns-prefetch' href='//netdna.bootstrapcdn.com' />
+    <link rel='dns-prefetch' href='//fonts.googleapis.com' />
+    <style type="text/css">
+        img.wp-smiley,
+        img.emoji {
+            display: inline !important;
+            border: none !important;
+            box-shadow: none !important;
+            height: 1em !important;
+            width: 1em !important;
+            margin: 0 .07em !important;
+            vertical-align: -0.1em !important;
+            background: none !important;
+            padding: 0 !important
+        }
+    </style>
+    <style id='rocket-lazyload-inline-css' type='text/css'>
+        .rll-youtube-player {
+            position: relative;
+            padding-bottom: 56.23%;
+            height: 0;
+            overflow: hidden;
+            max-width: 100%;
+            background: #000;
+            margin: 5px
+        }
+
+        .rll-youtube-player iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 100;
+            background: 0 0
+        }
+
+        .rll-youtube-player img {
+            bottom: 0;
+            display: block;
+            left: 0;
+            margin: auto;
+            max-width: 100%;
+            width: 100%;
+            position: absolute;
+            right: 0;
+            top: 0;
+            border: none;
+            height: auto;
+            cursor: pointer;
+            -webkit-transition: .4s all;
+            -moz-transition: .4s all;
+            transition: .4s all
+        }
+
+        .rll-youtube-player img:hover {
+            -webkit-filter: brightness(75%)
+        }
+
+        .rll-youtube-player .play {
+            height: 72px;
+            width: 72px;
+            left: 50%;
+            top: 50%;
+            margin-left: -36px;
+            margin-top: -36px;
+            position: absolute;
+            background: url(https://assets.azul.com/wp-content/plugins/wp-rocket/inc/front/img/youtube.png) no-repeat;
+            cursor: pointer
+        }
+    </style>
+    <script type='text/javascript' src='https://assets.azul.com/wp-content/cache/busting/1/wp-includes/js/jquery/jquery-1.12.4.js'></script>
+    <script type='text/javascript'>/* <![CDATA[ */ var vlpp_vars = { "prettyPhoto_rel": "wp-video-lightbox", "animation_speed": "fast", "slideshow": "5000", "autoplay_slideshow": "false", "opacity": "0.80", "show_title": "true", "allow_resize": "true", "allow_expand": "false", "default_width": "640", "default_height": "480", "counter_separator_label": "\/", "theme": "pp_default", "horizontal_padding": "20", "hideflash": "false", "wmode": "opaque", "autoplay": "false", "modal": "false", "deeplinking": "false", "overlay_gallery": "true", "overlay_gallery_max": "30", "keyboard_shortcuts": "true", "ie6_fallback": "true" }; /* ]]> */</script>
+    <link rel='https://api.w.org/' href='https://www.azul.com/wp-json/' />
+    <link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.azul.com/xmlrpc.php?rsd" />
+    <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://www.azul.com/wp-includes/wlwmanifest.xml" />
+    <meta name="generator" content="WordPress 4.9.8" />
+    <link rel='shortlink' href='https://www.azul.com/' />
+    <style type="text/css">
+        .lsp_main_slider {
+            background-color: #FFF;
+            width: 1000px;
+            height: 100px;
+            padding: 8px;
+            position: relative;
+            margin-bottom: 24px
+        }
+
+        .lsp_slider_controls {
+            position: relative;
+            top: 50%;
+            margin-top: -20px
+        }
+
+        .lsp_next_btn {
+            background: url(https://assets.azul.com/wp-content/plugins/logo-slider/ls_arrows/lsp_arrow1_next.png) no-repeat center;
+            float: right;
+            width: 40px;
+            height: 40px;
+            display: inline-block;
+            text-indent: -9000px;
+            cursor: pointer
+        }
+
+        .lsp_prev_btn {
+            background: url(https://assets.azul.com/wp-content/plugins/logo-slider/ls_arrows/lsp_arrow1_prev.png) no-repeat center;
+            float: float;
+            width: 40px;
+            height: 40px;
+            display: inline-block;
+            text-indent: -9000px;
+            cursor: pointer
+        }
+
+        .lsp_slider_img {
+            height: auto;
+            margin-top: -50px;
+            overflow: hidden;
+            position: absolute;
+            top: 50%;
+            left: 6%;
+            text-align: center;
+            width: 910px
+        }
+
+        #logo-slider {
+            height: auto;
+            margin-top: -50px;
+            overflow: hidden;
+            position: absolute;
+            top: 50%;
+            left: 6%;
+            text-align: center;
+            width: 910px
+        }
+
+        .lsp_img_div {
+            width: 100%;
+            height: auto
+        }
+
+        .visible_phone {
+            visibility: hidden;
+            display: none
+        }
+
+        .visible_desktop {
+            visibility: visible
+        }
+
+        @media screen and (min-width:801px) and (max-width:1024px) {
+            .visible_phone {
+                visibility: visible;
+                display: inherit
+            }
+            .visible_desktop {
+                visibility: hidden;
+                display: none
+            }
+            .lsp_main_slider {
+                background-color: #FFF;
+                height: 100px;
+                padding: 8px;
+                position: relative;
+                width: 100%;
+                margin-bottom: 24px
+            }
+            .lsp_slider_img {
+                height: auto;
+                margin-left: -334px;
+                margin-top: -65px;
+                overflow: hidden;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: 668px;
+                text-align: center
+            }
+            #logo-slider {
+                height: auto;
+                margin-left: -334px;
+                margin-top: -65px;
+                overflow: hidden;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: 668px;
+                text-align: center
+            }
+        }
+
+        @media screen and (min-width:641px) and (max-width:800px) {
+            .visible_phone {
+                visibility: visible;
+                display: inherit
+            }
+            .visible_desktop {
+                visibility: hidden;
+                display: none
+            }
+            .lsp_main_slider {
+                background-color: #FFF;
+                height: 100px;
+                padding: 8px;
+                position: relative;
+                width: 100%;
+                margin-bottom: 24px
+            }
+            .lsp_slider_img {
+                height: auto;
+                margin-left: -256px;
+                margin-top: -65px;
+                overflow: hidden;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: 512px;
+                text-align: center
+            }
+            #logo-slider {
+                height: auto;
+                margin-left: -256px;
+                margin-top: -65px;
+                overflow: hidden;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: 512px;
+                text-align: center
+            }
+        }
+
+        @media screen and (min-width:481px) and (max-width:640px) {
+            .visible_phone {
+                visibility: visible;
+                display: inherit
+            }
+            .visible_desktop {
+                visibility: hidden;
+                display: none
+            }
+            .lsp_main_slider {
+                background-color: #FFF;
+                height: 100px;
+                padding: 8px;
+                position: relative;
+                width: 100%;
+                margin-bottom: 24px
+            }
+            .lsp_slider_img {
+                height: auto;
+                margin-left: -176px;
+                margin-top: -65px;
+                overflow: hidden;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: 346px;
+                text-align: center
+            }
+            #logo-slider {
+                height: auto;
+                margin-left: -176px;
+                margin-top: -65px;
+                overflow: hidden;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: 346px;
+                text-align: center
+            }
+        }
+
+        @media screen and (min-width:320px) and (max-width:480px) {
+            .visible_phone {
+                visibility: visible;
+                display: inherit
+            }
+            .visible_desktop {
+                visibility: hidden;
+                display: none
+            }
+            .lsp_main_slider {
+                background-color: #FFF;
+                height: 100px;
+                padding: 8px;
+                position: relative;
+                width: 100%;
+                margin-bottom: 24px
+            }
+            .lsp_slider_img {
+                height: auto;
+                margin-left: -91px;
+                margin-top: -65px;
+                overflow: hidden;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: 185px;
+                text-align: center
+            }
+            #logo-slider {
+                height: auto;
+                margin-left: -91px;
+                margin-top: -65px;
+                overflow: hidden;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: 185px;
+                text-align: center
+            }
+        }
+    </style>
+    <script type="text/javascript">(function (url) {
+            if (/(?:Chrome\/26\.0\.1410\.63 Safari\/537\.31|WordfenceTestMonBot)/.test(navigator.userAgent)) { return; }
+            var addEvent = function (evt, handler) {
+                if (window.addEventListener) {
+                    document.addEventListener(evt, handler, false);
+                } else if (window.attachEvent) {
+                    document.attachEvent('on' + evt, handler);
+                }
+            };
+            var removeEvent = function (evt, handler) {
+                if (window.removeEventListener) {
+                    document.removeEventListener(evt, handler, false);
+                } else if (window.detachEvent) {
+                    document.detachEvent('on' + evt, handler);
+                }
+            };
+            var evts = 'contextmenu dblclick drag dragend dragenter dragleave dragover dragstart drop keydown keypress keyup mousedown mousemove mouseout mouseover mouseup mousewheel scroll'.split(' ');
+            var logHuman = function () {
+                if (window.wfLogHumanRan) { return; }
+                window.wfLogHumanRan = true;
+                var wfscr = document.createElement('script');
+                wfscr.type = 'text/javascript';
+                wfscr.async = true;
+                wfscr.src = url + '&r=' + Math.random();
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(wfscr);
+                for (var i = 0; i < evts.length; i++) {
+                    removeEvent(evts[i], logHuman);
+                }
+            };
+            for (var i = 0; i < evts.length; i++) {
+                addEvent(evts[i], logHuman);
+            }
+        })('//www.azul.com/?wordfence_lh=1&hid=AAB97E05EFC9290B40B4CCD91BA644B6');</script>
+    <noscript>
+        <img src="https://d5nxst8fruw4z.cloudfront.net/atrk.gif?account=+7z0p1IWhd10fn" style="display:none" height="1" width="1"
+            alt="" />
+    </noscript>
+    <style type="text/css">
+        .recentcomments a {
+            display: inline !important;
+            padding: 0 !important;
+            margin: 0 !important
+        }
+    </style>
+    <!--[if lte IE 9]><link rel="stylesheet" type="text/css" href="https://www.azul.com/wp-content/plugins/js_composer/assets/css/vc_lte_ie9.min.css" media="screen"><![endif]-->
+    <style type="text/css">
+        .broken_link,
+        a.broken_link {
+            text-decoration: line-through
+        }
+    </style>
+    <style type="text/css" id="wp-custom-css">
+        section.investorslist div.logoholder img {
+            height: auto !Important;
+            width: auto !Important
+        }
+    </style>
+    <noscript>
+        <style type="text/css">
+            .wpb_animate_when_almost_visible {
+                opacity: 1
+            }
+        </style>
+    </noscript>
+</head>
+
+<body class="home page-template-default page page-id-26 wpb-js-composer js-comp-ver-5.5.4 vc_responsive">
+    <noscript>
+        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WLPJ9BS" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
+    <div class="countdown-bar ">
+        <p class="main-text">We're counting down to the last free Oracle Java 8 update - what's your plan?</p>
+        <div class="timer-container">
+            <div class="days">
+                <div class="number"> 00</div>
+                <div class="exp"> days</div>
+            </div>
+            <div class="hours">
+                <div class="number"> 00</div>
+                <div class="exp"> hours</div>
+            </div>
+            <div class="minutes">
+                <div class="number"> 00</div>
+                <div class="exp"> min</div>
+            </div>
+            <div class="seconds">
+                <div class="number"> 00</div>
+                <div class="exp"> sec</div>
+            </div>
+        </div>
+        <p class="sub-text">Azul can save your day.
+            <a href="https://www.azul.com/last-free-java-8-download/" class="greenbtn greenbtnSolid">Learn How!</a>
+        </p>
+    </div>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+                    aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="https://www.azul.com">
+                    <img alt="Azul Systems, Inc." src="https://assets.azul.com/wp-content/themes/AzulSystems/images/Azul-Logo.png">
+                </a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul id="menu-topmenu" class="nav navbar-nav">
+                    <li id="menu-item-5652" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-5652 dropdown">
+                        <a href="#" data-toggle="dropdown" aria-haspopup="true" class="dropdown-toggle">Products
+                            <span class="caret"></span>
+                        </a>
+                        <ul role="menu" class=" dropdown-menu">
+                            <li id="menu-item-1050" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1050">
+                                <a href="https://www.azul.com/products/zing/">Zing
+                                    <sup>®</sup>
+                                </a>
+                            </li>
+                            <li id="menu-item-15052" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-15052">
+                                <a href="https://www.azul.com/products/zulu-and-zulu-enterprise/">Zulu
+                                    <sup>®</sup> Enterprise</a>
+                            </li>
+                            <li id="menu-item-1060" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1060">
+                                <a href="https://www.azul.com/products/zulu-embedded/">Zulu
+                                    <sup>®</sup> Embedded</a>
+                            </li>
+                            <li id="menu-item-13505" class="OneLinkHide_zh menu-item menu-item-type-post_type menu-item-object-page menu-item-13505">
+                                <a href="https://www.azul.com/products/pricing/">Pricing</a>
+                            </li>
+                            <li id="menu-item-13506" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-13506">
+                                <a href="https://www.azul.com/downloads/">Product Downloads</a>
+                            </li>
+                            <li id="menu-item-6441" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6441">
+                                <a href="https://www.azul.com/resources/azul-technology/">Azul Technology</a>
+                            </li>
+                            <li id="menu-item-5329" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5329">
+                                <a href="https://www.azul.com/products/open-source-tools/">Open Source Tools</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li id="menu-item-5654" class="sub-menu-columns menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-5654 dropdown">
+                        <a href="#" data-toggle="dropdown" aria-haspopup="true" class="dropdown-toggle">Solutions
+                            <span class="caret"></span>
+                        </a>
+                        <ul role="menu" class=" dropdown-menu">
+                            <li id="menu-item-8238" class="nav-title menu-item menu-item-type-custom menu-item-object-custom menu-item-8238">
+                                <a href="#">Technologies:</a>
+                            </li>
+                            <li id="menu-item-8239" class="nav-title menu-item menu-item-type-custom menu-item-object-custom menu-item-8239">
+                                <a href="#">Industries:</a>
+                            </li>
+                            <li id="menu-item-1112" class="right menu-item menu-item-type-post_type menu-item-object-page menu-item-1112">
+                                <a href="https://www.azul.com/solutions/big-data/">Big Data &#038; Analytics</a>
+                            </li>
+                            <li id="menu-item-1108" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1108">
+                                <a href="https://www.azul.com/solutions/capital-market/">Capital Markets</a>
+                            </li>
+                            <li id="menu-item-3436" class="right first-right menu-item menu-item-type-post_type menu-item-object-page menu-item-3436">
+                                <a href="https://www.azul.com/solutions/cassandra/">Cassandra</a>
+                            </li>
+                            <li id="menu-item-8136" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8136">
+                                <a href="https://www.azul.com/solutions/digital-advertising/">Digital Advertising</a>
+                            </li>
+                            <li id="menu-item-3169" class="right menu-item menu-item-type-post_type menu-item-object-page menu-item-3169">
+                                <a href="https://www.azul.com/solutions/cloud-deployment/">Cloud Deployment</a>
+                            </li>
+                            <li id="menu-item-1109" class="right menu-item menu-item-type-post_type menu-item-object-page menu-item-1109">
+                                <a href="https://www.azul.com/solutions/digitaltravel/">Digital Travel</a>
+                            </li>
+                            <li id="menu-item-3168" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3168">
+                                <a href="https://www.azul.com/solutions/embedded-and-the-iot/">Embedded and IoT</a>
+                            </li>
+                            <li id="menu-item-3707" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3707">
+                                <a href="https://www.azul.com/solutions/omnichannel-commerce/">Omnichannel Commerce</a>
+                            </li>
+                            <li id="menu-item-3170" class="right menu-item menu-item-type-post_type menu-item-object-page menu-item-3170">
+                                <a href="https://www.azul.com/solutions/in-memory-computing/">In-memory Computing</a>
+                            </li>
+                            <li id="menu-item-5895" class="right menu-item menu-item-type-post_type menu-item-object-page menu-item-5895">
+                                <a href="https://www.azul.com/solutions/telco-wireless/">Telecom &#038; Wireless</a>
+                            </li>
+                            <li id="menu-item-4966" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4966">
+                                <a href="https://www.azul.com/solutions/search/">Search</a>
+                            </li>
+                            <li id="menu-item-5611" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5611">
+                                <a href="https://www.azul.com/solutions/saas/">Software as a Service</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li id="menu-item-18" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-18 dropdown">
+                        <a href="#" data-toggle="dropdown" aria-haspopup="true" class="dropdown-toggle">Resources
+                            <span class="caret"></span>
+                        </a>
+                        <ul role="menu" class=" dropdown-menu">
+                            <li id="menu-item-13533" class="OneLinkHide_zh menu-item menu-item-type-post_type menu-item-object-page menu-item-13533">
+                                <a href="https://www.azul.com/products/pricing/">Product Pricing</a>
+                            </li>
+                            <li id="menu-item-1116" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1116">
+                                <a href="https://www.azul.com/resources/success-stories/">Customer Success</a>
+                            </li>
+                            <li id="menu-item-1127" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1127">
+                                <a href="https://www.azul.com/resources/datasheet/">Data Sheets</a>
+                            </li>
+                            <li id="menu-item-1128" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1128">
+                                <a href="https://www.azul.com/resources/technical-white-papers-azul-systems-technology/">White Papers</a>
+                            </li>
+                            <li id="menu-item-1129" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1129">
+                                <a href="https://www.azul.com/resources/presentations/">Presentations and Webinars</a>
+                            </li>
+                            <li id="menu-item-5141" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5141">
+                                <a href="https://www.azul.com/resources/infographics/">Infographics</a>
+                            </li>
+                            <li id="menu-item-5142" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5142">
+                                <a href="https://www.azul.com/resources/e-books/">e-books</a>
+                            </li>
+                            <li id="menu-item-5140" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5140">
+                                <a href="https://www.azul.com/resources/videos/">Azul Videos On Demand</a>
+                            </li>
+                            <li id="menu-item-5331" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5331">
+                                <a href="https://www.azul.com/products/open-source-tools/">Open Source Tools</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li id="menu-item-20" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-20">
+                        <a href="https://www.azul.com/support/">Support</a>
+                    </li>
+                    <li id="menu-item-3501" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-3501 dropdown">
+                        <a href="#" data-toggle="dropdown" aria-haspopup="true" class="dropdown-toggle">Company
+                            <span class="caret"></span>
+                        </a>
+                        <ul role="menu" class=" dropdown-menu">
+                            <li id="menu-item-5850" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5850">
+                                <a href="/about-us/company-profile/#leadership">Leadership</a>
+                            </li>
+                            <li id="menu-item-5597" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5597">
+                                <a href="https://www.azul.com/news-events/press-releases/">Press Releases</a>
+                            </li>
+                            <li id="menu-item-5812" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5812">
+                                <a href="https://www.azul.com/news-events/in-the-news/">In the News</a>
+                            </li>
+                            <li id="menu-item-6535" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6535">
+                                <a href="https://www.azul.com/news-events/events/">Events</a>
+                            </li>
+                            <li id="menu-item-5594" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5594">
+                                <a href="https://www.azul.com/about-us/awards/">Awards</a>
+                            </li>
+                            <li id="menu-item-5595" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5595">
+                                <a href="https://www.azul.com/about-us/investors/">Investors</a>
+                            </li>
+                            <li id="menu-item-8716" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8716">
+                                <a href="https://www.azul.com/about-us/tech-partners-alliances/">Tech Partners and Alliances</a>
+                            </li>
+                            <li id="menu-item-12636" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-12636">
+                                <a href="https://www.azul.com/about-us/company-profile/#contact">Office Locations</a>
+                            </li>
+                            <li id="menu-item-5596" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5596">
+                                <a href="https://www.azul.com/careers-at-azul-systems/">Careers</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li id="menu-item-5813" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5813">
+                        <a href="https://www.azul.com/blog/">Blog</a>
+                    </li>
+                </ul>
+                <div class="navbar-right clearfix">
+                    <div class="navbar-widget-wrap clearfix">
+                        <div id="text-2" class="widget-odd widget-last widget-first widget-1 widget widget_text">
+                            <div class="textwidget">
+                                <div class="OneLinkHide OneLinkKeepLinks">
+                                    <a class="cn-btn" href="https://jp.azul.com">日本語</a>
+                                </div>
+                                <div class="OneLinkHide OneLinkKeepLinks">
+                                    <a class="cn-btn" href="https://cn.azul.com">中文</a>
+                                </div>
+                                <a href="https://www.azul.com/contact-us/">
+                                    <div class="greenbtn greenbtnSolid">Contact Us</div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="top-search">
+                        <a href="#" class="top-search-icn">
+                            <img src="https://assets.azul.com/wp-content/themes/AzulSystems/images/search.png"> </a>
+                        <div class="hide top-search-form-wrap">
+                            <form role="search" method="get" id="searchform" class="searchform" action="https://www.azul.com/">
+                                <div>
+                                    <label class="screen-reader-text" for="s"></label>
+                                    <input type="text" value="" name="s" data-swplive="true" data-swpengine="default"
+                                        data-swpconfig="default" id="s" placeholder="Search..." />
+                                    <input type="submit" id="searchsubmit" value="Search" />
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <style>
+        .bgimage {
+            background-image: url(https://assets.azul.com/files/homepage-banner-may-18.jpg) !important
+        }
+
+        .jumboheading .jumbobuttons .whitebtn {
+            padding: 11px 45px;
+            width: auto
+        }
+
+        .jumboheading .jumbobuttons .greenbtn {
+            padding: 11px 35px;
+            width: auto
+        }
+    </style>
+    <section id="jumbotron">
+        <div class="jumbotron">
+            <div class="bgimage enabled-news-ticker" style="background: url('https://assets.azul.com/files/homepage-banner-may-18.jpg');">
+                <div class="container">
+                    <div class="row">
+                        <section id="valueprop">
+                            <div class="container valueprops">
+                                <div class="row text-center">
+                                    <div class="col-xs-12 valuepropsheading ">
+                                        <h1>From the Enterprise to Embedded Systems</h1>
+                                        <p>We Build Java Runtimes that Deliver Better Business Outcomes</p>
+                                    </div>
+                                </div>
+                                <div class="row text-center">
+                                    <div class="col-xs-12 col-sm-4 blurb-cta">
+                                        <img src="https://assets.azul.com/files/omnichannel-icon-positioned-bottom.png">
+                                        <h2>Zing
+                                            <sup>®</sup>: A Better JVM Which Improves Your Business Metrics</h2>
+                                        <a href="https://www.azul.com/products/zing/"
+                                            role="button" class="greenbtn blue">Discover Zing
+                                            <sup>®</sup>
+                                        </a>
+                                        <div>
+                                            <a href="https://go.azul.com/zing-trial-download" target="_blank" role="button" class="greenbtn">Try Zing
+                                                <sup>®</sup> Free</a>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-4 blurb-cta">
+                                        <img src="https://assets.azul.com/files/bigdata-icon-positioned-bottom.png">
+                                        <h2>Zulu
+                                            <sup>®</sup> Enterprise: OpenJDK
+                                            <sup>™</sup> Builds with the World's Best Commercial Support</h2>
+                                        <a href="https://www.azul.com/products/zulu-and-zulu-enterprise/"
+                                            role="button" class="greenbtn blue">Discover Zulu
+                                            <sup>®</sup> Enterprise</a>
+                                        <div>
+                                            <a href="https://www.azul.com/downloads/zulu/" target="_blank" role="button" class="greenbtn">Download Zulu
+                                                <sup>®</sup>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-4 blurb-cta">
+                                        <img src="https://assets.azul.com/files/cassandra-icon-positioned-bottom.png">
+                                        <h2>Zulu
+                                            <sup>®</sup> Embedded: OpenJDK
+                                            <sup>TM</sup> for OEMS and ISVS</h2>
+                                        <a href="https://www.azul.com/products/zulu-embedded/"
+                                            role="button" class="greenbtn blue">Discover Zulu
+                                            <sup>®</sup> Embedded</a>
+                                        <div>
+                                            <a href="https://www.azul.com/downloads/zulu-embedded/" target="_blank" role="button"
+                                                class="greenbtn">Download Now</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+            <div class="news-ticker alert alert-success alert-dismissable">
+                <div class="container">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 clearfix">
+                        <div class="news-ticker-table">
+                            <div class="news-ticker-table-cell news-ticker-content-cell">
+                                <div id="newsticker-slider" class="carousel slide" data-ride="carousel" data-interval="5000">
+                                    <div class="carousel-inner" role="listbox">
+                                        <div class="item active">
+                                            <h5>
+                                                <a href="/free-java-production-support-for-microsoft-azure-azure-stack/">
+                                                    <span class="item-type">News</span>
+                                                    <span class="item-type-border"></span> New Azul initiative with Microsoft to Bring Free Java Production
+                                                    Support on Azure and Azure Stack |
+                                                    <span class="item-date">Sept. 25, 2018</span>
+                                                </a>
+                                                <a href="/free-java-production-support-for-microsoft-azure-azure-stack/"
+                                                    class="learn-more">Learn More</a>
+                                            </h5>
+                                        </div>
+                                        <div class="item ">
+                                            <h5>
+                                                <a href="http://docs.azul.com/zing/zing-quick-start-fp.htm">
+                                                    <span class="item-type">Trending</span>
+                                                    <span class="item-type-border"></span> Download Zing Java 11 Feature Preview |
+                                                    <span class="item-date">October 4, 2018</span>
+                                                </a>
+                                                <a href="http://docs.azul.com/zing/zing-quick-start-fp.htm" class="learn-more">Learn More</a>
+                                            </h5>
+                                        </div>
+                                        <div class="item ">
+                                            <h5>
+                                                <a href="/press_release/azul-systems-joins-osgi-alliance/">
+                                                    <span class="item-type">News</span>
+                                                    <span class="item-type-border"></span> Azul Systems joins OSGi Alliance |
+                                                    <span class="item-date">October 16, 2018</span>
+                                                </a>
+                                                <a href="/press_release/azul-systems-joins-osgi-alliance/" class="learn-more">Learn More</a>
+                                            </h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="customers">
+        <div class="container">
+            <div class="customers">
+                <div class="row text-center">
+                    <div class="col-sm-12">
+                        <h2>World-class customers</h2>
+                        <p>We’ve served enterprises since 2002. Check out some of our references.</p>
+                    </div>
+                </div>
+                <div class="row text-center">
+                    <div class="col-xs-12 col-sm-3 ">
+                        <img src="https://assets.azul.com/files/Azul_Microsoft.png" class="img-responsive center-block">
+                    </div>
+                    <div class="col-xs-12 col-sm-3 ">
+                        <img src="https://assets.azul.com/files/homelogo_2.png" class="img-responsive center-block">
+                    </div>
+                    <div class="col-xs-12 col-sm-3 ">
+                        <img src="https://assets.azul.com/files/Netflix_Logo_RGB-2-2-1.png" class="img-responsive center-block">
+                    </div>
+                    <div class="col-xs-12 col-sm-3 ">
+                        <img src="https://assets.azul.com/files/VisitAdobe.comWebLogo_141031BW-2-1.png" class="img-responsive center-block">
+                    </div>
+                </div>
+                <div class="row text-center">
+                    <div class="col-xs-12 col-sm-3 ">
+                        <img src="https://assets.azul.com/files/Credit_Suisse_Logo-optimized.png" class="img-responsive center-block">
+                    </div>
+                    <div class="col-xs-12 col-sm-3 ">
+                        <img src="https://assets.azul.com/files/homelogo_OKI.png" class="img-responsive center-block">
+                    </div>
+                    <div class="col-xs-12 col-sm-3 ">
+                        <img src="https://assets.azul.com/files/320px-RedHat.svg_-1.png" class="img-responsive center-block">
+                    </div>
+                    <div class="col-xs-12 col-sm-3 ">
+                        <img src="https://assets.azul.com/files/Taboola-Logo-optimized.png" class="img-responsive center-block">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="buttongroup">
+                            <a href="http://www.azul.com/resources/success-stories/#other-clients" class="greybtn">See More Customers</a>
+                            <a href="https://www.azul.com/resources/success-stories/" class="greenbtn greenbtnSolid">View Case Studies</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="casestudy">
+        <div class="casestudy">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <img src="https://assets.azul.com/files/Azul_Company_Logo_Priceline1.png">
+                        <h1>Zing powers global-scale business</h1>
+                        <p>Travel powerhouse Priceline keeps its edge by using an in-memory cache of hotel rooms and prices.
+                            Priceline delights its customers with a Zing-powered Java infrastructure that pauselessly manages
+                            billions of rapidly-changing room rates.</p>
+                        <a href="https://www.azul.com/successstories/priceline/"
+                            class="greenbtn greenbtnSolid">Read Case Study</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="news">
+        <div class="news">
+            <div class="container">
+                <div class="row bottom-banner">
+                    <div class="col-xs-12"></div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-8">
+                        <h1>Latest News</h1>
+                        <span>
+                            <strong>LinuxInsider</strong> | October 31, 2018</span>
+                        <br>
+                        <a href="https://www.linuxinsider.com/story/85646.html" target="_blank">Open Source Software: 20-Plus Years of Innovation</a>
+                        <br>
+                        <br>
+                        <span>
+                            <strong>ADT Mag</strong> | October 31, 2018</span>
+                        <br>
+                        <a href="https://adtmag.com/blogs/watersworks/2018/10/jcp-exec-candidates.aspx" target="_blank">Meet the JCP Executive Committee Candidates for Fall 2018</a>
+                        <br>
+                        <br>
+                        <span>
+                            <strong>Infoq</strong> | October 28, 2018</span>
+                        <br>
+                        <a href="https://www.infoq.com/news/2018/10/codeone-java-keynote" target="_blank">The Future of Java is Today: CodeOne (née JavaOne) Keynote Highlight</a>
+                        <br>
+                        <br>
+                    </div>
+                    <div class="col-xs-12 col-sm-4">
+                        <h1>Featured Event</h1>
+                        <div class="greybg event-thumbnail-wrap">
+                            <img width="2300" height="678" src="data:image/gif;base64,R0lGODdhAQABAPAAAP///wAAACwAAAAAAQABAEACAkQBADs="
+                                data-lazy-src="https://assets.azul.com/files/devoxx-artikelbild.png" class="img-responsive wp-post-image"
+                                alt="devoxx" data-lazy-srcset="https://assets.azul.com/files/devoxx-artikelbild.png 2300w, https://assets.azul.com/files/devoxx-artikelbild-300x88.png 300w, https://assets.azul.com/files/devoxx-artikelbild-768x226.png 768w, https://assets.azul.com/files/devoxx-artikelbild-1024x302.png 1024w"
+                                data-lazy-sizes="(max-width: 2300px) 100vw, 2300px" />
+                            <noscript>
+                                <img width="2300" height="678" src="https://assets.azul.com/files/devoxx-artikelbild.png" class="img-responsive wp-post-image"
+                                    alt="devoxx" srcset="https://assets.azul.com/files/devoxx-artikelbild.png 2300w, https://assets.azul.com/files/devoxx-artikelbild-300x88.png 300w, https://assets.azul.com/files/devoxx-artikelbild-768x226.png 768w, https://assets.azul.com/files/devoxx-artikelbild-1024x302.png 1024w"
+                                    sizes="(max-width: 2300px) 100vw, 2300px" />
+                            </noscript>
+                        </div>
+                        <br>
+                        <span class="eventDate">November 14, 2018</span>
+                        <span class="location">Antwerp, Belgium</span>
+                        <br>
+                        <a href="https://www.azul.com/events/devoxx-belgium-2018/">More Details</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="cta">
+        <div class="container homecta">
+            <div class="row text-center">
+                <div class="col-xs-12 homectaheading">
+                    <h1>Easy to evaluate, buy, and deploy.</h1>
+                </div>
+            </div>
+            <div class="row text-center ">
+                <div class="col-xs-12 col-sm-4 ctapadding blurb-cta">
+                    <h2>Zing
+                        <sup>®</sup>
+                    </h2>
+                    <p>Try Zing in your environment. See how a better JVM can bring value to your business. </p>
+                    <a href="https://www.azul.com/products/zing/"
+                        role="button" class="greenbtn visible-xs">Learn More</a>
+                </div>
+                <div class="col-xs-12 col-sm-4 ctapadding blurb-cta">
+                    <h2>Zulu
+                        <sup>®</sup> Enterprise</h2>
+                    <p>Download Zulu
+                        <sup>&reg;</sup> builds free from Azul, Microsoft Azure, AWS, Docker, and Canonical’s Juju Charm Store</p>
+                    <a href="https://www.azul.com/products/zulu-and-zulu-enterprise/" role="button" class="greenbtn visible-xs">Learn More</a>
+                </div>
+                <div class="col-xs-12 col-sm-4 ctapadding blurb-cta">
+                    <h2>Zulu
+                        <sup>®</sup> Embedded</h2>
+                    <p>Need a friction-free customized Java platform for Embedded and IoT? Choose Zulu
+                        <sup>&reg;</sup> Embedded.</p>
+                    <a href="https://www.azul.com/products/zulu-embedded/" role="button" class="greenbtn visible-xs">Learn More</a>
+                </div>
+            </div>
+            <div class="row text-center hidden-xs">
+                <div class="col-xs-12 col-sm-4 ctapadding ">
+                    <a href="https://www.azul.com/products/zing/" role="button" class="greenbtn">Learn More</a>
+                </div>
+                <div class="col-xs-12 col-sm-4 ctapadding">
+                    <a href="https://www.azul.com/products/zulu-and-zulu-enterprise/" role="button" class="greenbtn">Learn More</a>
+                </div>
+                <div class="col-xs-12 col-sm-4 ctapadding">
+                    <a href="https://www.azul.com/products/zulu-embedded/" role="button" class="greenbtn">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="footer footerHolder">
+        <div class="container">
+            <footer>
+                <div class="row">
+                    <div class="col-xs-12 col-md-5">
+                        <div class="nav footerLeft">
+                            <div id="text-5" class="widget-odd widget-first widget-1 widget widget_text">
+                                <div class="textwidget">
+                                    <img src="data:image/gif;base64,R0lGODdhAQABAPAAAP///wAAACwAAAAAAQABAEACAkQBADs=" data-lazy-src="https://assets.azul.com/files/footerlogo.png">
+                                    <noscript>
+                                        <img src="https://assets.azul.com/files/footerlogo.png">
+                                    </noscript>
+                                    <p> Azul Systems, the industry’s only company exclusively focused on Java and the Java Virtual
+                                        Machine (JVM), builds fully supported, standards-compliant runtimes that help enable
+                                        Java-based businesses.</p>
+                                </div>
+                            </div>
+                            <div id="search-4" class="widget-even widget-2 widget widget_search">
+                                <form role="search" method="get" id="searchform" class="searchform" action="https://www.azul.com/">
+                                    <div>
+                                        <label class="screen-reader-text" for="s"></label>
+                                        <input type="text" value="" name="s" data-swplive="true" data-swpengine="default"
+                                            data-swpconfig="default" id="s" placeholder="Search..." />
+                                        <input type="submit" id="searchsubmit" value="Search" />
+                                    </div>
+                                </form>
+                            </div>
+                            <div id="text-7" class="widget-odd widget-last widget-3 widget widget_text">
+                                <div class="textwidget">
+                                    <ul class="social-links">
+                                        <li>
+                                            <a href="http://www.facebook.com/AzulSystemsInc" class="icon icon-facebook" target="_blank"></a>
+                                        </li>
+                                        <li>
+                                            <a href="http://twitter.com/azulsystems" class="icon icon-twitter" target="_blank"></a>
+                                        </li>
+                                        <li>
+                                            <a href="http://www.linkedin.com/company/azul-systems" class="icon icon-linkedin"
+                                                target="_blank"></a>
+                                        </li>
+                                        <li>
+                                            <a href="https://vimeo.com/azulsystems" class="icon icon-vimeo" target="_blank"></a>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.youtube.com/user/azulsystemsjava" class="icon icon-youtube"
+                                                target="_blank"></a>
+                                        </li>
+                                        <li>
+                                            <img src="data:image/gif;base64,R0lGODdhAQABAPAAAP///wAAACwAAAAAAQABAEACAkQBADs="
+                                                data-lazy-src="https://assets.azul.com/files/bin-wechat-2.png" width="80" height="80">
+                                            <noscript>
+                                                <img src="https://assets.azul.com/files/bin-wechat-2.png" width="80" height="80">
+                                            </noscript>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12  col-md-7">
+                        <div class="row">
+                            <div class="col-xs-12  col-md-4">
+                                <h4>Company</h4>
+                                <ul id="menu-footer-menu-1" class="footerNav">
+                                    <li id="menu-item-2891" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2891">
+                                        <a href="https://www.azul.com/about-us/company-profile/">About Us</a>
+                                    </li>
+                                    <li id="menu-item-2878" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2878">
+                                        <a href="https://www.azul.com/about-us/awards/">Awards</a>
+                                    </li>
+                                    <li id="menu-item-2879" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2879">
+                                        <a href="https://www.azul.com/about-us/investors/">Investors</a>
+                                    </li>
+                                    <li id="menu-item-2881" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2881">
+                                        <a href="https://www.azul.com/careers-at-azul-systems/">Careers</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-xs-12  col-md-4">
+                                <h4>Products</h4>
+                                <ul id="menu-footer-menu-2" class="footerNav">
+                                    <li id="menu-item-2890" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2890">
+                                        <a href="https://www.azul.com/products/zing/">Zing
+                                            <sup>®</sup>
+                                        </a>
+                                    </li>
+                                    <li id="menu-item-4978" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4978">
+                                        <a href="https://www.azul.com/products/zulu-and-zulu-enterprise/">Zulu
+                                            <sup>®</sup>
+                                        </a>
+                                    </li>
+                                    <li id="menu-item-2884" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2884">
+                                        <a href="https://www.azul.com/products/zulu-embedded/">Zulu
+                                            <sup>®</sup> Embedded</a>
+                                    </li>
+                                    <li id="menu-item-5610" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5610">
+                                        <a href="https://www.azul.com/products/open-source-tools/">Open Source Tools</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-xs-12  col-md-4 partners-col">
+                                <h4>Partners</h4>
+                                <ul id="menu-footer-menu-3" class="footerNav">
+                                    <li id="menu-item-8721" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8721">
+                                        <a href="https://www.azul.com/about-us/tech-partners-alliances/">Tech Partners and Alliances</a>
+                                    </li>
+                                </ul>
+                                <div class="other-sites">
+                                    <h4 class="second-heading">Other Azul Sites</h4>
+                                    <div class="OneLinkHide OneLinkKeepLinks">
+                                        <a class="cn-btn" href="https://jp.azul.com">日本語</a>
+                                    </div>
+                                    <div class="OneLinkHide OneLinkKeepLinks">
+                                        <a class="cn-btn" href="https://cn.azul.com">中文</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12  col-md-4">
+                                <h4>News & Events</h4>
+                                <ul id="menu-footer-menu-4" class="footerNav">
+                                    <li id="menu-item-3496" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3496">
+                                        <a href="https://www.azul.com/news-events/press-releases/">Press Releases</a>
+                                    </li>
+                                    <li id="menu-item-4072" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4072">
+                                        <a href="https://www.azul.com/news-events/in-the-news/">In the News</a>
+                                    </li>
+                                    <li id="menu-item-3498" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3498">
+                                        <a href="https://www.azul.com/news-events/events/">Events</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-xs-12  col-md-4">
+                                <h4>Connect</h4>
+                                <ul id="menu-footer-menu-5" class="footerNav">
+                                    <li id="menu-item-3493" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3493">
+                                        <a href="https://www.azul.com/support/">Support</a>
+                                    </li>
+                                    <li id="menu-item-3494" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3494">
+                                        <a href="https://www.azul.com/contact/">Contact Us</a>
+                                    </li>
+                                    <li id="menu-item-3495" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3495">
+                                        <a href="https://www.azul.com/blog/">Azul Blog</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-xs-12  col-md-4">
+                                <h4>Solutions</h4>
+                                <ul id="menu-footer-menu-6" class="footerNav">
+                                    <li id="menu-item-4395" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4395">
+                                        <a href="https://www.azul.com/solutions/all-solutions/">Solutions</a>
+                                    </li>
+                                    <li id="menu-item-4392" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4392">
+                                        <a href="/solutions/all-solutions/#technology-solutions">Technology</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+    <div class="topline"></div>
+    <div class="footerHolder">
+        <div class="container ">
+            <div class="row copyrightholder">
+                <div class="col-xs-12">
+                    <p>&copy; Azul Systems, Inc. 2018 All rights reserved.</p>
+                    <ul id="menu-footer-copyright" class="copyrightnav copyright-menu">
+                        <li id="menu-item-1277" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1277">
+                            <span class="pipe"> | </span>
+                            <a href="https://www.azul.com/legal/privacy-policy/">Privacy Policy</a>
+                        </li>
+                        <li id="menu-item-1278" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1278">
+                            <span class="pipe"> | </span>
+                            <a href="https://www.azul.com/legal/legal/">Legal</a>
+                        </li>
+                        <li id="menu-item-1279" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1279">
+                            <span class="pipe"> | </span>
+                            <a href="https://www.azul.com/legal/terms-of-use/">Terms of Use</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <style type="text/css">
+        .searchwp-live-search-results {
+            opacity: 0;
+            transition: opacity .25s ease-in-out;
+            -moz-transition: opacity .25s ease-in-out;
+            -webkit-transition: opacity .25s ease-in-out;
+            height: 0;
+            overflow: hidden;
+            z-index: 9999;
+            position: absolute;
+            display: none
+        }
+
+        .searchwp-live-search-results-showing {
+            display: block;
+            opacity: 1;
+            height: auto;
+            overflow: auto
+        }
+
+        .searchwp-live-search-no-results {
+            padding: 3em 2em 0;
+            text-align: center
+        }
+
+        .searchwp-live-search-no-min-chars:after {
+            content: "Continue typing";
+            display: block;
+            text-align: center;
+            padding: 2em 2em 0
+        }
+    </style>
+    <script type='text/javascript' src='https://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css?ver=4.9.8'></script>
+    <script>(function (w, d) {
+            var b = d.getElementsByTagName("body")[0];
+            var s = d.createElement("script"); s.async = true;
+            s.src = !("IntersectionObserver" in w) ? "https://assets.azul.com/wp-content/plugins/wp-rocket/inc/front/js/lazyload-8.12.min.js" : "https://assets.azul.com/wp-content/plugins/wp-rocket/inc/front/js/lazyload-10.12.min.js";
+            w.lazyLoadOptions = {
+                elements_selector: "img,iframe",
+                data_src: "lazy-src",
+                data_srcset: "lazy-srcset",
+                data_sizes: "lazy-sizes",
+                skip_invisible: false,
+                class_loading: "lazyloading",
+                class_loaded: "lazyloaded",
+                threshold: 300,
+                callback_load: function (element) {
+                    if (element.tagName === "IFRAME" && element.dataset.rocketLazyload == "fitvidscompatible") {
+                        if (element.classList.contains("lazyloaded")) {
+                            if (typeof window.jQuery != "undefined") {
+                                if (jQuery.fn.fitVids) {
+                                    jQuery(element).parent().fitVids();
+                                }
+                            }
+                        }
+                    }
+                }
+            }; // Your options here. See "recipes" for more information about async.
+            b.appendChild(s);
+        }(window, document));
+
+        // Listen to the Initialized event
+        window.addEventListener('LazyLoad::Initialized', function (e) {
+            // Get the instance and puts it in the lazyLoadInstance variable
+            var lazyLoadInstance = e.detail.instance;
+
+            var observer = new MutationObserver(function (mutations) {
+                mutations.forEach(function (mutation) {
+                    lazyLoadInstance.update();
+                });
+            });
+
+            var b = document.getElementsByTagName("body")[0];
+            var config = { childList: true, subtree: true };
+
+            observer.observe(b, config);
+        }, false);</script>
+    <noscript>
+        <img src="//pixel.quantserve.com/pixel/p-8S6-tpQUMTZrf.gif?labels=_fp.event.Default" style="display: none;" border="0"
+            height="1" width="1" alt="Quantcast" /> </noscript>
+    <script src="https://assets.azul.com/wp-content/cache/min/1/91e4f5ffa6e238d574394afb1ea5e2e4.js" data-minify="1"
+        defer></script>
+    <script>WP_VIDEO_LIGHTBOX_VERSION = "1.8.6";
+        WP_VID_LIGHTBOX_URL = "https://www.azul.com/wp-content/plugins/wp-video-lightbox";
+        function wpvl_paramReplace(name, string, value) {
+            // Find the param with regex
+            // Grab the first character in the returned string (should be ? or &)
+            // Replace our href string with our new value, passing on the name and delimeter
+
+            var re = new RegExp("[\?&]" + name + "=([^&#]*)");
+            var matches = re.exec(string);
+            var newString;
+
+            if (matches === null) {
+                // if there are no params, append the parameter
+                newString = string + '?' + name + '=' + value;
+            } else {
+                var delimeter = matches[0].charAt(0);
+                newString = string.replace(re, delimeter + name + "=" + value);
+            }
+            return newString;
+        }</script>
+</body>
+
+</html>
+<!-- This website is like a Rocket, isn't it? Performance optimized by WP Rocket. Learn more: https://wp-rocket.me - Debug: cached@1541743356 -->

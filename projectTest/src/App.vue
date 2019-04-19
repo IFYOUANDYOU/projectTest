@@ -1,17 +1,24 @@
 <template>
   <div id="app">
-    <el-header>
-      <page-header></page-header>
-    </el-header>
-    <el-aside width="200px">
-      <NavMenus></NavMenus>
-    </el-aside>
-    <el-container>
-      <el-main>
-        <router-view></router-view>
-      </el-main>
-      <el-footer height="40px">Footer</el-footer>
-    </el-container>
+    <transition-group name="slide-fade" mode="out-in">
+      <el-header key="elheader">
+        <keep-alive>
+          <page-header></page-header>
+        </keep-alive>
+      </el-header>
+
+      <el-aside key="elaside" width="200px">
+        <keep-alive>
+          <nav-menus></nav-menus>
+        </keep-alive>
+      </el-aside>
+      <el-container key="elcontainer">
+        <el-main>
+          <router-view></router-view>
+        </el-main>
+        <el-footer height="40px">Footer</el-footer>
+      </el-container>
+    </transition-group>
   </div>
 </template>
 
@@ -28,12 +35,24 @@ export default {
 </script>
 
 <style lang="scss">
-.el-header,.el-aside{
+.slide-fade-enter-active {
+  transition: all 0.8s cubic-bezier(1, 0.5, 0.8, 1);
+}
+.slide-fade-leave-active {
+  transition: all 0.3s ease;
+}
+.slide-fade-enter,
+.slide-fade-leave-to {
+  transform: translateX(10px);
+  opacity: 0;
+}
+.el-header,
+.el-aside {
   position: fixed;
   left: 0;
   z-index: 2;
 }
-.el-header{
+.el-header {
   background: #000;
   right: 0;
   top: 0;
@@ -46,7 +65,7 @@ export default {
   margin: 60px 0 40px 200px;
   min-height: calc(100% - 100px);
 }
-.el-footer{
+.el-footer {
   position: absolute;
   left: 200px;
   right: 0;

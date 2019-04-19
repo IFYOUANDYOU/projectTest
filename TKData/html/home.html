@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>康复链 - 药商端</title>
+
+    <!-- Bootstrap css -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/animate.min.css" />
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_921837_46dtc1dypx1.css" />
+    <link rel="stylesheet" href="../css/index.min.css" />
+    <!--[if lt IE 9]>
+      <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body class="page" id="page">
+    <!-- 导航栏 -->
+    <nav class="navbar navbar-fixed-top animated fadeIn">
+        <div class="container">
+            <div id="navbar">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+                        aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="/" target="_self">
+                        <img src="../imgs/logo.png" alt="" />
+                    </a>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul id="menu-topmenu" class="nav navbar-nav">
+                        <li class="menu-item">
+                            <a href="#" target="_self">首页</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#" target="_self">分类浏览</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#" target="_self">充值中心</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#" target="_self">数据中心</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="navbar-right clearfix">
+                    <a class="cn-btn news" href="javascript:;" target="_self">
+                        <i class="iconfont icon-bell"></i>
+                    </a>
+                    <a class="cn-btn cart" href="javascript:;" target="_self">
+                        <i class="iconfont icon-gouwuchekong"></i>
+                    </a>
+                    <a class="cn-btn usercenter" href="javascript:;" target="_self">个人中心</a>
+                    <a class="cn-btn loginout" href="javascript:;" target="_self">退出登录</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- banner图 -->
+    <div class="banner animated fadeIn">
+        <div class="search-bar">
+            <div class="h1">医生数据资产信息库</div>
+            <div class="h2">医生信息+药物销售数据一网打尽</div>
+            <form action="">
+                <div class="box">
+                    <input class="search-input" type="text" placeholder="请输入关键字...." />
+                    <button class="search-btn" type="submit">
+                        <i class="iconfont icon-search"></i>
+                    </button>
+                </div>
+                <div class="tags">
+                    热门搜索：
+                    <a href="">阿莫西林</a>
+                    <a href="">阿莫西林</a>
+                </div>
+            </form>
+        </div>
+        <div id="carousel" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+                <li data-target="#carousel" data-slide-to="0" class="active"></li>
+                <li data-target="#carousel" data-slide-to="1"></li>
+                <li data-target="#carousel" data-slide-to="2"></li>
+            </ol>
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner" role="listbox">
+                <div class="item active">
+                    <img src="../imgs/banner1.jpg" alt="...">
+                    <div class="carousel-caption"></div>
+                </div>
+                <div class="item">
+                    <img src="../imgs/banner1.jpg" alt="...">
+                    <div class="carousel-caption"></div>
+                </div>
+                <div class="item">
+                    <img src="../imgs/banner1.jpg" alt="...">
+                    <div class="carousel-caption"></div>
+                </div>
+            </div>
+            <!-- Controls -->
+            <a class="left carousel-control" href="#carousel" role="button" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                <span class="sr-only"></span>
+            </a>
+            <a class="right carousel-control" href="#carousel" role="button" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                <span class="sr-only"></span>
+            </a>
+        </div>
+    </div>
+    <main>
+        <!-- 热门数据 hot -->
+        <div class="hot">
+            <div class="container">
+                <div class="index-title">
+                    <span class="name">热门数据</span>
+                    <a class="more" href="">查看全部</a>
+                </div>
+                <div class="row">
+                    <div class="col-xs-6 col-sm-4 col-md-3">
+                        <a class="goods animated fadeInDown" href="">
+                            <div class="thumb">
+                                <img class="thumbimg" src="../imgs/loginbox.jpg" alt="" />
+                                <div class="buy">
+                                    <span>立即购买</span>
+                                </div>
+                            </div>
+                            <div class="msg clearfix">
+                                <span class="pull-left name">范仲会数据资产</span>
+                                <span class="pull-right depart">皮肤外科</span>
+                            </div>
+                            <div class="tag clearfix">
+                                <span class="pull-left unit">单价</span>
+                                <span class="pull-right price">1000.00元起</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-xs-6 col-sm-4 col-md-3">
+                        <a class="goods animated fadeInDown" href="">
+                            <div class="thumb">
+                                <img class="thumbimg" src="../imgs/loginbox.jpg" alt="" />
+                                <div class="buy">
+                                    <span>立即购买</span>
+                                </div>
+                            </div>
+                            <div class="msg clearfix">
+                                <span class="pull-left name">范仲会数据资产</span>
+                                <span class="pull-right depart">皮肤外科</span>
+                            </div>
+                            <div class="tag clearfix">
+                                <span class="pull-left unit">单价</span>
+                                <span class="pull-right price">1000.00元起</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-xs-6 col-sm-4 col-md-3">
+                        <a class="goods animated fadeInDown" href="">
+                            <div class="thumb">
+                                <img class="thumbimg" src="../imgs/loginbox.jpg" alt="" />
+                                <div class="buy">
+                                    <span>立即购买</span>
+                                </div>
+                            </div>
+                            <div class="msg clearfix">
+                                <span class="pull-left name">范仲会数据资产</span>
+                                <span class="pull-right depart">皮肤外科</span>
+                            </div>
+                            <div class="tag clearfix">
+                                <span class="pull-left unit">单价</span>
+                                <span class="pull-right price">1000.00元起</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-xs-6 col-sm-4 col-md-3">
+                        <a class="goods animated fadeInDown" href="">
+                            <div class="thumb">
+                                <img class="thumbimg" src="../imgs/loginbox.jpg" alt="" />
+                                <div class="buy">
+                                    <span>立即购买</span>
+                                </div>
+                            </div>
+                            <div class="msg clearfix">
+                                <span class="pull-left name">范仲会数据资产</span>
+                                <span class="pull-right depart">皮肤外科</span>
+                            </div>
+                            <div class="tag clearfix">
+                                <span class="pull-left unit">单价</span>
+                                <span class="pull-right price">1000.00元起</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-xs-6 col-sm-4 col-md-3">
+                        <a class="goods animated fadeInDown" href="">
+                            <div class="thumb">
+                                <img class="thumbimg" src="../imgs/loginbox.jpg" alt="" />
+                                <div class="buy">
+                                    <span>立即购买</span>
+                                </div>
+                            </div>
+                            <div class="msg clearfix">
+                                <span class="pull-left name">范仲会数据资产</span>
+                                <span class="pull-right depart">皮肤外科</span>
+                            </div>
+                            <div class="tag clearfix">
+                                <span class="pull-left unit">单价</span>
+                                <span class="pull-right price">1000.00元起</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-xs-6 col-sm-4 col-md-3">
+                        <a class="goods animated fadeInDown" href="">
+                            <div class="thumb">
+                                <img class="thumbimg" src="../imgs/loginbox.jpg" alt="" />
+                                <div class="buy">
+                                    <span>立即购买</span>
+                                </div>
+                            </div>
+                            <div class="msg clearfix">
+                                <span class="pull-left name">范仲会数据资产</span>
+                                <span class="pull-right depart">皮肤外科</span>
+                            </div>
+                            <div class="tag clearfix">
+                                <span class="pull-left unit">单价</span>
+                                <span class="pull-right price">1000.00元起</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 搜索 最新 资讯 -->
+        <div class="index-sec">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-4 col-md-3">
+                        <div class="index-title">
+                            <span class="name">快速搜索</span>
+                        </div>
+                        <div class="filter animated fadeInDown">
+                            <div class="fh1">
+                                <span class="name">热门医院</span>
+                                <a class="more">更多 》</a>
+                            </div>
+                            <ul>
+                                <li>
+                                    <a href="">重庆市第三人民医院</a>
+                                </li>
+                                <li>
+                                    <a href="">重庆市第三人民医院</a>
+                                </li>
+                                <li>
+                                    <a href="">重庆市第三人民医院</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="filter departs animated fadeInDown">
+                            <div class="fh1">
+                                <span class="name">热门科室</span>
+                                <a class="more">更多 》</a>
+                            </div>
+                            <ul>
+                                <li>
+                                    <a href="">心内科</a>
+                                </li>
+                                <li>
+                                    <a href="">骨科</a>
+                                </li>
+                                <li>
+                                    <a href="">呼吸科</a>
+                                </li>
+                                <li>
+                                    <a href="">血液科</a>
+                                </li>
+                                <li>
+                                    <a href="">儿科</a>
+                                </li>
+                                <li>
+                                    <a href="">妇科</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-sm-8 col-md-6">
+                        <div class="index-title">
+                            <span class="name">最新数据</span>
+                            <a class="more" href="">查看全部</a>
+                        </div>
+                        <div class="new">
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-6 col-md-6">
+                                    <a class="goods animated fadeInDown" href="">
+                                        <div class="thumb">
+                                            <img class="thumbimg" src="../imgs/loginbox.jpg" alt="" />
+                                            <div class="buy">
+                                                <span>立即购买</span>
+                                            </div>
+                                        </div>
+                                        <div class="msg clearfix">
+                                            <span class="pull-left name">范仲会数据资产</span>
+                                            <span class="pull-right depart">皮肤外科</span>
+                                        </div>
+                                        <div class="tag clearfix">
+                                            <span class="pull-left unit">单价</span>
+                                            <span class="pull-right price">1000.00元起</span>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-xs-12 col-sm-6 col-md-6">
+                                    <a class="goods animated fadeInDown" href="">
+                                        <div class="thumb">
+                                            <img class="thumbimg" src="../imgs/loginbox.jpg" alt="" />
+                                            <div class="buy">
+                                                <span>立即购买</span>
+                                            </div>
+                                        </div>
+                                        <div class="msg clearfix">
+                                            <span class="pull-left name">范仲会数据资产</span>
+                                            <span class="pull-right depart">皮肤外科</span>
+                                        </div>
+                                        <div class="tag clearfix">
+                                            <span class="pull-left unit">单价</span>
+                                            <span class="pull-right price">1000.00元起</span>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-xs-12 col-sm-6 col-md-6">
+                                    <a class="goods animated fadeInDown" href="">
+                                        <div class="thumb">
+                                            <img class="thumbimg" src="../imgs/loginbox.jpg" alt="" />
+                                            <div class="buy">
+                                                <span>立即购买</span>
+                                            </div>
+                                        </div>
+                                        <div class="msg clearfix">
+                                            <span class="pull-left name">范仲会数据资产</span>
+                                            <span class="pull-right depart">皮肤外科</span>
+                                        </div>
+                                        <div class="tag clearfix">
+                                            <span class="pull-left unit">单价</span>
+                                            <span class="pull-right price">1000.00元起</span>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-xs-12 col-sm-6 col-md-6">
+                                    <a class="goods animated fadeInDown" href="">
+                                        <div class="thumb">
+                                            <img class="thumbimg" src="../imgs/loginbox.jpg" alt="" />
+                                            <div class="buy">
+                                                <span>立即购买</span>
+                                            </div>
+                                        </div>
+                                        <div class="msg clearfix">
+                                            <span class="pull-left name">范仲会数据资产</span>
+                                            <span class="pull-right depart">皮肤外科</span>
+                                        </div>
+                                        <div class="tag clearfix">
+                                            <span class="pull-left unit">单价</span>
+                                            <span class="pull-right price">1000.00元起</span>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-3">
+                        <div class="index-title">
+                            <span class="name">行业资讯</span>
+                            <a class="more" href="">查看全部</a>
+                        </div>
+                        <div class="newslist animated fadeInDown">
+                            <a class="news" href="">
+                                <div class="new-body">
+                                    <h4 class="new-heading">与我们签订伙伴，在今年下半年</h4>
+                                    <h6 class="new-desc">新闻内容我公司县开展特别活动，凡事将会收到特别礼物,网站于近日发布了设计。</h6>
+                                    <p class="new-date">2017-01-05 14:21</p>
+                                </div>
+                            </a>
+                            <a class="news" href="">
+                                <div class="new-body">
+                                    <h4 class="new-heading">与我们签订伙伴，在今年下半年</h4>
+                                    <h6 class="new-desc">新闻内容我公司县开展特别活动，凡事将会收到特别礼物,网站于近日发布了设计。</h6>
+                                    <p class="new-date">2017-01-05 14:21</p>
+                                </div>
+                            </a>
+                            <a class="news" href="">
+                                <div class="new-body">
+                                    <h4 class="new-heading">与我们签订伙伴，在今年下半年</h4>
+                                    <h6 class="new-desc">新闻内容我公司县开展特别活动，凡事将会收到特别礼物,网站于近日发布了设计。</h6>
+                                    <p class="new-date">2017-01-05 14:21</p>
+                                </div>
+                            </a>
+                            <a class="news" href="">
+                                <div class="new-body">
+                                    <h4 class="new-heading">与我们签订伙伴，在今年下半年</h4>
+                                    <h6 class="new-desc">新闻内容我公司县开展特别活动，凡事将会收到特别礼物,网站于近日发布了设计。</h6>
+                                    <p class="new-date">2017-01-05 14:21</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+     <!--底部公司信息-->
+    <footer>
+        <div class="footer animated fadeIn">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 ft1">
+                        <h3>联系方式
+                            <span> \ Contact Us</span>
+                        </h3>
+                        <div class="foot-main">
+                            <p>Add：重庆市渝北区百灵路6号兴茂盛世银座</p>
+                            <p>Tel：023-54852458</p>
+                            <br />
+                            <p>Email：54852458@qq.com</p>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 ft1">
+                        <h3>关于我们
+                            <span> \ About Us</span>
+                        </h3>
+                        <div class="foot-main">
+                            <p>
+                                重庆医生联盟是由30余位三甲医院专家共同出资组建的医生集团，目前有来自重庆市各大三甲公立医院的1000+优质医生资源。
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 ft2">
+                        <div class="pull-left">
+                            <h3>友情链接
+                                <span> \ Links</span>
+                            </h3>
+                            <div class="foot-main">
+                                <p>重庆市医生联盟</p>
+                            </div>
+                        </div>
+                        <div class="pull-right clearfix">
+                            <img class="qrcode" src="../imgs/qrcode.jpg" alt="" />
+                            <p class="text-center">康复链小程序</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="copyright animated fadeIn">
+        Copyright(c)2015 All Rights Reserved. Powered By 医生联盟 渝ICP备15012849号-1 渝公网安备 50010302000145号
+    </div>
+    <div id="returntop">
+        <i class="iconfont icon-fold"></i>
+    </div>
+    <script>
+        window.onload = function () { };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
+</body>
+
+</html>

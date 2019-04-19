@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>康复链 - 药商端 - 购买记录</title>
+
+    <!-- Bootstrap css -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/animate.min.css" />
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_921837_2d92r1er4lg.css" />
+    <link rel="stylesheet" href="../css/index.min.css" />
+    <!--[if lt IE 9]>
+      <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body class="page" id="page">
+    <!-- 导航栏 -->
+    <nav class="navbar navbar-fixed-top animated fadeIn">
+        <div class="container">
+            <div id="navbar">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+                        aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="/" target="_self">
+                        <img src="../imgs/logo.png" alt="" />
+                    </a>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul id="menu-topmenu" class="nav navbar-nav">
+                        <li class="menu-item">
+                            <a href="#" target="_self">首页</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#" target="_self">分类浏览</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#" target="_self">充值中心</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#" target="_self">数据中心</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="navbar-right clearfix">
+                    <a class="cn-btn news" href="javascript:;" target="_self">
+                        <i class="iconfont icon-bell"></i>
+                    </a>
+                    <a class="cn-btn cart" href="javascript:;" target="_self">
+                        <i class="iconfont icon-gouwuchekong"></i>
+                    </a>
+                    <a class="cn-btn usercenter" href="javascript:;" target="_self">个人中心</a>
+                    <a class="cn-btn loginout" href="javascript:;" target="_self">退出登录</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <main>
+        <!-- 热门数据 hot -->
+        <div class="orders">
+            <div class="container">
+                <div class="index-title animated fadeInDown">
+                    <span class="name">数据中心</span>
+                </div>
+                <div class="ordertable animated fadeInDown">
+                    <div class="item thead">
+                        <div class="th">序号</div>
+                        <div class="th">购买时间</div>
+                        <div class="th">数据名称</div>
+                        <div class="th">参数</div>
+                        <div class="th">药品</div>
+                        <div class="th">金额</div>
+                        <div class="th">操作</div>
+                    </div>
+                    <div class="item tbody">
+                        <div class="tb">
+                            <a class="index" href="javascript:;">1</a>
+                        </div>
+                        <div class="tb date">2018年3月25日</div>
+                        <div class="tb name">重庆市第一人民医院心内科</div>
+                        <div class="tb period">2018.3.5-2018.8.10</div>
+                        <div class="tb drugname">板蓝根</div>
+                        <div class="tb price">￥4320.00</div>
+                        <div class="tb action">
+                            <a href="javascript:;">点击详情</a>
+                        </div>
+                    </div>
+                    <div class="item tbody">
+                        <div class="tb">
+                            <a class="index" href="javascript:;">2</a>
+                        </div>
+                        <div class="tb date">2018年3月25日</div>
+                        <div class="tb name">重庆市第一人民医院心内科</div>
+                        <div class="tb period">2018.3.5-2018.8.10</div>
+                        <div class="tb drugname">板蓝根</div>
+                        <div class="tb price">￥4320.00</div>
+                        <div class="tb action">
+                            <a href="javascript:;">点击详情</a>
+                        </div>
+                    </div>
+                    <div class="item tbody">
+                        <div class="tb">
+                            <a class="index" href="javascript:;">3</a>
+                        </div>
+                        <div class="tb date">2018年3月25日</div>
+                        <div class="tb name">重庆市第一人民医院心内科</div>
+                        <div class="tb period">2018.3.5-2018.8.10</div>
+                        <div class="tb drugname">板蓝根</div>
+                        <div class="tb price">￥4320.00</div>
+                        <div class="tb action">
+                            <a href="javascript:;">点击详情</a>
+                        </div>
+                    </div>
+                </div>
+                <div aria-label="" class="pagediv animated fadeInDown">
+                    <ul class="pagination">
+                        <li class="disabled">
+                            <a href="#" aria-label="Previous">
+                                <span aria-hidden="true">&laquo;</span>
+                            </a>
+                        </li>
+                        <li class="active">
+                            <a href="#">1</a>
+                        </li>
+                        <li>
+                            <a href="#">2</a>
+                        </li>
+                        <li>
+                            <a href="#">3</a>
+                        </li>
+                        <li>
+                            <a href="#">4</a>
+                        </li>
+                        <li>
+                            <a href="#">5</a>
+                        </li>
+                        <li>
+                            <a href="#" aria-label="Next">
+                                <span aria-hidden="true">&raquo;</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <span class="all">共32页</span>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!--底部公司信息-->
+    <footer>
+        <div class="footer animated fadeIn">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 ft1">
+                        <h3>联系方式
+                            <span> \ Contact Us</span>
+                        </h3>
+                        <div class="foot-main">
+                            <p>Add：重庆市渝北区百灵路6号兴茂盛世银座</p>
+                            <p>Tel：023-54852458</p>
+                            <br />
+                            <p>Email：54852458@qq.com</p>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 ft1">
+                        <h3>关于我们
+                            <span> \ About Us</span>
+                        </h3>
+                        <div class="foot-main">
+                            <p>
+                                重庆医生联盟是由30余位三甲医院专家共同出资组建的医生集团，目前有来自重庆市各大三甲公立医院的1000+优质医生资源。
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 ft2">
+                        <div class="pull-left">
+                            <h3>友情链接
+                                <span> \ Links</span>
+                            </h3>
+                            <div class="foot-main">
+                                <p>重庆市医生联盟</p>
+                            </div>
+                        </div>
+                        <div class="pull-right clearfix">
+                            <img class="qrcode" src="../imgs/qrcode.jpg" alt="" />
+                            <p class="text-center">康复链小程序</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="copyright animated fadeIn">
+        Copyright(c)2015 All Rights Reserved. Powered By 医生联盟 渝ICP备15012849号-1 渝公网安备 50010302000145号
+    </div>
+    <div id="returntop">
+        <i class="iconfont icon-fold"></i>
+    </div>
+    <script>
+        window.onload = function () { };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
+</body>
+
+</html>

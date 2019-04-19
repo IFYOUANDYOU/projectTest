@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>康复链 - 药商端 - 购物车</title>
+
+    <!-- Bootstrap css -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/animate.min.css" />
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_921837_46dtc1dypx1.css" />
+    <link rel="stylesheet" href="../css/index.min.css" />
+    <!--[if lt IE 9]>
+      <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body class="page" id="page">
+    <!-- 导航栏 -->
+    <nav class="navbar navbar-fixed-top animated fadeIn">
+        <div class="container">
+            <div id="navbar">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+                        aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="/" target="_self">
+                        <img src="../imgs/logo.png" alt="" />
+                    </a>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul id="menu-topmenu" class="nav navbar-nav">
+                        <li class="menu-item">
+                            <a href="#" target="_self">首页</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#" target="_self">分类浏览</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#" target="_self">充值中心</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#" target="_self">数据中心</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="navbar-right clearfix">
+                    <a class="cn-btn news" href="javascript:;" target="_self">
+                        <i class="iconfont icon-bell"></i>
+                    </a>
+                    <a class="cn-btn cart" href="javascript:;" target="_self">
+                        <i class="iconfont icon-gouwuchekong"></i>
+                    </a>
+                    <a class="cn-btn usercenter" href="javascript:;" target="_self">个人中心</a>
+                    <a class="cn-btn loginout" href="javascript:;" target="_self">退出登录</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <main>
+        <!-- 热门数据 hot -->
+        <div class="orders">
+            <div class="container">
+                <div class="index-title animated fadeInDown">
+                    <span class="name">购物车（
+                        <b class="cartnum">7</b>）</span>
+                </div>
+                <div class="ordertable carttable animated fadeInDown" id="cartFm">
+                    <div class="item thead">
+                        <div class="th">
+                            <label for="selall" class="checks">
+                                <input type="checkbox" name="selall" class="selall"> 全选
+                            </label>
+                        </div>
+                        <div class="th">编号</div>
+                        <div class="th">商品图片</div>
+                        <div class="th">参数</div>
+                        <div class="th">药品</div>
+                        <div class="th">金额</div>
+                        <div class="th">操作</div>
+                    </div>
+                    <div class="item tbody">
+                        <div class="tb">
+                            <label for="sel" class="checks">
+                                <input type="checkbox" class="sel" name="sel" data-index="1" value="4320.00">
+                            </label>
+                        </div>
+                        <div class="tb num">12354657987141</div>
+                        <div class="tb thumb">
+                            <img src="../imgs/loginbox.jpg">
+                        </div>
+                        <div class="tb period">重庆市第一人民医院心内科<br>
+                            2018.3.5-2018.8.10</div>
+                        <div class="tb drugname">板蓝根</div>
+                        <div class="tb price">￥4320.00</div>
+                        <div class="tb action">
+                            <a href="javascript:;">删除</a>
+                            <a href="javascript:;">收藏</a>
+                        </div>
+                    </div>
+                    <div class="item tbody">
+                        <div class="tb">
+                            <label for="sel" class="checks">
+                                <input type="checkbox" class="sel" name="sel" data-index="2" value="555.15">
+                            </label>
+                        </div>
+                        <div class="tb num">12354657987141</div>
+                        <div class="tb thumb">
+                            <img src="../imgs/loginbox.jpg">
+                        </div>
+                        <div class="tb period">
+                            重庆市第一人民医院心内科<br>
+                                2018.3.5-2018.8.10
+                                </div>
+                        <div class="tb drugname">板蓝根</div>
+                        <div class="tb price">￥555.15</div>
+                        <div class="tb action">
+                            <a href="javascript:;">删除</a>
+                            <a href="javascript:;">收藏</a>
+                        </div>
+                    </div>
+                    <div class="item tbody">
+                        <div class="tb">
+                            <label for="sel" class="checks">
+                                <input type="checkbox" class="sel" name="sel" data-index="3" value="12.15">
+                            </label>
+                        </div>
+                        <div class="tb num">12354657987141</div>
+                        <div class="tb thumb">
+                            <img src="../imgs/loginbox.jpg">
+                        </div>
+                        <div class="tb period">重庆市第一人民医院心内科<br>
+                            2018.3.5-2018.8.10</div>
+                        <div class="tb drugname">板蓝根</div>
+                        <div class="tb price">￥12.15</div>
+                        <div class="tb action">
+                            <a href="javascript:;">删除</a>
+                            <a href="javascript:;">收藏</a>
+                        </div>
+                    </div>
+                    <div class="tfoot clearfix">
+                        <span class="pull-left">
+                            <label for="selall" class="checks pull-left">
+                                <input type="checkbox" name="selall" class="selall" id=""> 全选
+                            </label>
+                            <input type="button" name="del" class="del" value="批量删除">
+                        </span>
+                        <div class="pull-right clearfix">
+                            <span class="hasnum pull-left">已选商品
+                                <b class="selnum">0</b> 件</span>
+                            <span class="hasmoney pull-left">总价:
+                                <b class="selmoney">0</b>
+                            </span>
+                            <a href="javascript:;" class="zfbtn pull-right">去结算</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- 热门数据 hot -->
+                <div class="hot">
+                        <div class="index-title">
+                            <span class="name">热门数据</span>
+                            <a class="more" href="">查看全部</a>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-6 col-sm-4 col-md-3">
+                                <a class="goods animated fadeInDown" href="">
+                                    <div class="thumb">
+                                        <img class="thumbimg" src="../imgs/loginbox.jpg" alt="" />
+                                        <div class="buy">
+                                            <span>立即购买</span>
+                                        </div>
+                                    </div>
+                                    <div class="msg clearfix">
+                                        <span class="pull-left name">范仲会数据资产</span>
+                                        <span class="pull-right depart">皮肤外科</span>
+                                    </div>
+                                    <div class="tag clearfix">
+                                        <span class="pull-left unit">单价</span>
+                                        <span class="pull-right price">1000.00元起</span>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-xs-6 col-sm-4 col-md-3">
+                                <a class="goods animated fadeInDown" href="">
+                                    <div class="thumb">
+                                        <img class="thumbimg" src="../imgs/loginbox.jpg" alt="" />
+                                        <div class="buy">
+                                            <span>立即购买</span>
+                                        </div>
+                                    </div>
+                                    <div class="msg clearfix">
+                                        <span class="pull-left name">范仲会数据资产</span>
+                                        <span class="pull-right depart">皮肤外科</span>
+                                    </div>
+                                    <div class="tag clearfix">
+                                        <span class="pull-left unit">单价</span>
+                                        <span class="pull-right price">1000.00元起</span>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-xs-6 col-sm-4 col-md-3">
+                                <a class="goods animated fadeInDown" href="">
+                                    <div class="thumb">
+                                        <img class="thumbimg" src="../imgs/loginbox.jpg" alt="" />
+                                        <div class="buy">
+                                            <span>立即购买</span>
+                                        </div>
+                                    </div>
+                                    <div class="msg clearfix">
+                                        <span class="pull-left name">范仲会数据资产</span>
+                                        <span class="pull-right depart">皮肤外科</span>
+                                    </div>
+                                    <div class="tag clearfix">
+                                        <span class="pull-left unit">单价</span>
+                                        <span class="pull-right price">1000.00元起</span>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-xs-6 col-sm-4 col-md-3">
+                                <a class="goods animated fadeInDown" href="">
+                                    <div class="thumb">
+                                        <img class="thumbimg" src="../imgs/loginbox.jpg" alt="" />
+                                        <div class="buy">
+                                            <span>立即购买</span>
+                                        </div>
+                                    </div>
+                                    <div class="msg clearfix">
+                                        <span class="pull-left name">范仲会数据资产</span>
+                                        <span class="pull-right depart">皮肤外科</span>
+                                    </div>
+                                    <div class="tag clearfix">
+                                        <span class="pull-left unit">单价</span>
+                                        <span class="pull-right price">1000.00元起</span>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </main>
+    <!--底部公司信息-->
+    <footer>
+        <div class="footer animated fadeIn">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 ft1">
+                        <h3>联系方式
+                            <span> \ Contact Us</span>
+                        </h3>
+                        <div class="foot-main">
+                            <p>Add：重庆市渝北区百灵路6号兴茂盛世银座</p>
+                            <p>Tel：023-54852458</p>
+                            <br />
+                            <p>Email：54852458@qq.com</p>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 ft1">
+                        <h3>关于我们
+                            <span> \ About Us</span>
+                        </h3>
+                        <div class="foot-main">
+                            <p>
+                                重庆医生联盟是由30余位三甲医院专家共同出资组建的医生集团，目前有来自重庆市各大三甲公立医院的1000+优质医生资源。
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 ft2">
+                        <div class="pull-left">
+                            <h3>友情链接
+                                <span> \ Links</span>
+                            </h3>
+                            <div class="foot-main">
+                                <p>重庆市医生联盟</p>
+                            </div>
+                        </div>
+                        <div class="pull-right clearfix">
+                            <img class="qrcode" src="../imgs/qrcode.jpg" alt="" />
+                            <p class="text-center">康复链小程序</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="copyright animated fadeIn">
+        Copyright(c)2015 All Rights Reserved. Powered By 医生联盟 渝ICP备15012849号-1 渝公网安备 50010302000145号
+    </div>
+    <div id="returntop">
+        <i class="iconfont icon-fold"></i>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
+    <script>
+        jQuery(function(){
+            var count = 0;
+            var total = 0;
+            var isCheckAll = false;
+            console.log(Number("￥4320.00"))
+            var cartFm = $("#cartFm");
+            var checks = $("input[type='checkbox']");
+            //全选
+            cartFm.on("click",".selall",function(e){
+                checks.prop("checked",true);
+                var selLen = $(".sel:checked").length;
+                cartFm.find(".selnum").html(selLen);
+                selPrice();
+            })
+            //单选
+            cartFm.on("click",".sel",function(e){
+                var sel = $(".sel").length;
+                var selLen = $(".sel:checked").length;
+                if(sel == selLen){
+                    $(".selall").prop("checked",true);
+                }else{
+                    $(".selall").prop("checked",false);
+                }
+                cartFm.find(".selnum").html(selLen);
+                selPrice();
+            })
+            function selPrice(){
+                var sum=0;
+                $(".sel").each(function(){
+                    if(this.checked==true){
+                    var price = $(this).val();
+                    sum += Number(price);
+                    }
+                });
+                cartFm.find(".selmoney").html("￥"+sum.toFixed(2));
+            }
+        });
+    </script>
+</body>
+
+</html>

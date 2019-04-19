@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>康复链 - 药商端 - 登录</title>
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_921837_46dtc1dypx1.css" />
+    <link rel="stylesheet" href="../css/animate.min.css">
+    <link rel="stylesheet" href="../css/login.min.css">
+    <!--[if lt IE 9]>
+      <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <div class="main">
+        <form class="login-box animated fadeInDown" action="" onsubmit="return loginverify(this)">
+            <div class="logo">
+                <img src="../imgs/logo-white.png" alt="">
+            </div>
+            <div class="box">
+                <div class="form">
+                    <img class="login-h1" src="../imgs/form-h1.png" alt="">
+                    <div class="inpts">
+                        <div class="input">
+                            <label class="label" for="username"><i class="iconfont icon-my"></i></label>
+                            <input type="text" name="username" id="username" placeholder="请输入登录账号">
+                        </div>
+                        <div class="input">
+                            <label class="label" for="password"><i class="iconfont icon-lock"></i></label>
+                            <input type="password" name="password" id="password" placeholder="输入您的密码">
+                        </div>
+                    </div>
+                    <label class="autologin">
+                        <input name="autologin" type="checkbox">下次自动登录
+                    </label>
+                    <div class="btnlogin">
+                        <button class="loginbtn" type="submit">登录</button>
+                    </div>
+                </div>
+            </div>
+            <div class="slogan">
+                <img src="../imgs/slogan.png" alt="">
+            </div>
+        </form>
+    </div>
+    <footer>
+        <div class="copyright">Copyright(c)2015 All Rights Reserved. Powered By 医生联盟</div>
+    </footer>
+</body>
+<script>
+    function loginverify(e){
+        var username = e.username.value;
+        var password = e.password.value;
+        if(username.length == 0) return false;
+        if(password.length == 0) return false;
+        console.log("登录成功")
+    }
+</script>
+</html>

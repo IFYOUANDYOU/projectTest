@@ -3,7 +3,7 @@
   <div class="mini-list">
     <el-table
       ref="multipleTable"
-      :data="projects"
+      :data="projects | addressFilter"
       tooltip-effect="dark"
       style="width: 100%"
       @selection-change="projectSelectChange"
@@ -39,27 +39,27 @@ export default {
         {
           date: "2016-05-02",
           name: "王小虎",
-          address: "上海市普陀区金沙江路 1518 弄"
+          address: "重庆市普陀区金沙江路 1518 弄"
         },
         {
           date: "2016-05-04",
           name: "王小虎",
-          address: "上海市普陀区金沙江路 1518 弄"
+          address: "浙江市普陀区金沙江路 1518 弄"
         },
         {
           date: "2016-05-01",
           name: "王小虎",
-          address: "上海市普陀区金沙江路 1518 弄"
+          address: "天津市普陀区金沙江路 1518 弄"
         },
         {
           date: "2016-05-08",
           name: "王小虎",
-          address: "上海市普陀区金沙江路 1518 弄"
+          address: "北京市普陀区金沙江路 1518 弄"
         },
         {
           date: "2016-05-06",
           name: "王小虎",
-          address: "上海市普陀区金沙江路 1518 弄"
+          address: "深圳市普陀区金沙江路 1518 弄"
         },
         {
           date: "2016-05-07",
@@ -73,15 +73,20 @@ export default {
   computed: {},
   methods: {
     projectSelectChange() {},
-    projectLogin(idx,row){
-
+    projectLogin(idx, row) {},
+    projectEdit(idx, row) {
+      console.log(idx, row);
     },
-    projectEdit(idx,row) {
-        console.log(idx,row)
-    },
-    projectDelete(idx,row) {}
+    projectDelete(idx, row) {}
   },
-  mounted() {}
+  mounted() {},
+  filters: {
+    addressFilter(value) {
+      return value.filter(item => {
+        return item.address.indexOf('上海') !== -1;
+      })
+    }
+  }
 };
 </script>
 <style lang='scss' scoped>
